@@ -51,6 +51,7 @@ data/cards/cards-plus-a.js
 data/cards/cards-plus-b.js
 data/cards/cards-plus-c.js
 data/cards/cards-plus-d.js
+data/cards/cards-plus-e.js
 data/questions/questions-legacy-a.js
 data/questions/questions-legacy-b.js
 data/questions/questions-legacy-c.js
@@ -66,6 +67,11 @@ data/questions/questions-ch34-37.js
 data/questions/questions-plus-blank1.js
 data/questions/questions-plus-blank2.js
 data/questions/questions-plus-seq.js
+data/questions/questions-plus2-ox.js
+data/questions/questions-plus2-blank.js
+data/questions/questions-plus2-src.js
+data/questions/questions-plus2-cmp.js
+data/questions/questions-plus2-seq.js
 data/questions/questions-plus-ox1.js
 data/questions/questions-plus-ox2.js
 data/questions/questions-plus-ox3.js

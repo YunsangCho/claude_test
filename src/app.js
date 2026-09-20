@@ -21,12 +21,12 @@ const ERAS=[
  {name:"일제 강점기",sub:"34~37강",ch:[34,35,36,37]},
  {name:"현대",sub:"38~40강",ch:[38,39,40]}];
 
-const CARDS=[].concat(CARDS_01_03,CARDS_04_05,CARDS_06_07,CARDS_08_09,CARDS_10_11,CARDS_12_13,CARDS_14_15,CARDS_16_17,CARDS_18_19,CARDS_20_21,CARDS_22_23,CARDS_24_25,CARDS_26_27,CARDS_28_29,CARDS_30_31,CARDS_32_33,CARDS_34_35,CARDS_36_37,CARDS_38_39,CARDS_40,CARDS_PLUS_A,CARDS_PLUS_B,CARDS_PLUS_C,CARDS_PLUS_D).map((r,i)=>({id:"c"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
-const OXS=[].concat(RAW_OX,RAW_OX2,RAW_OX3,RAW_OX4,RAW_OX5,RAW_OX6,RAW_OX7,RAW_OX8,RAW_OX9,RAW_OX10,RAW_OX11,RAW_OX12,RAW_OX13,RAW_OX14,RAW_OX15,RAW_OX16).map((r,i)=>({id:"x"+i,ch:r[0],q:r[1],ans:!!r[2],tip:r[3]||""}));
-const SEQS=[].concat(RAW_SEQ,RAW_SEQ2,RAW_SEQ3,RAW_SEQ4,RAW_SEQ5,RAW_SEQ6,RAW_SEQ7,RAW_SEQ8,RAW_SEQ9,RAW_SEQ10,RAW_SEQ11,RAW_SEQ12,RAW_LINE_A.map(r=>[r[0],r[1],r[2]])).map((r,i)=>({id:"s"+i,ch:r[0],title:r[1],items:r[2]}));
-const SRCS=[].concat(RAW_SRC,RAW_SRC2,RAW_SRC3,RAW_SRC4,RAW_SRC5,RAW_SRC6,RAW_SRC7,RAW_SRC8,RAW_SRC9,RAW_SRC10,RAW_SRC11,RAW_SRC12).map((r,i)=>({id:"r"+i,ch:r[0],src:r[1],q:r[2],a:r[3],w:r[4],tip:r[5]||""}));
-const BLANKS=[].concat(RAW_BLANK,RAW_BLANK2,RAW_BLANK3,RAW_BLANK4,RAW_BLANK5,RAW_BLANK6,RAW_BLANK7,RAW_BLANK8,RAW_BLANK9,RAW_BLANK10,RAW_BLANK11,RAW_BLANK12,RAW_BLANK13).map((r,i)=>({id:"b"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
-const CMPS=[].concat(RAW_CMP,RAW_CMP2,RAW_CMP3,RAW_CMP4,RAW_CMP5,RAW_CMP6,RAW_CMP7,RAW_CMP8,RAW_CMP9,RAW_CMP10,RAW_CMP11,RAW_CMP12).map((r,i)=>({ci:i,ch:r[0],title:r[1],A:r[2],B:r[3],rows:r[4]}));
+const CARDS=[].concat(CARDS_01_03,CARDS_04_05,CARDS_06_07,CARDS_08_09,CARDS_10_11,CARDS_12_13,CARDS_14_15,CARDS_16_17,CARDS_18_19,CARDS_20_21,CARDS_22_23,CARDS_24_25,CARDS_26_27,CARDS_28_29,CARDS_30_31,CARDS_32_33,CARDS_34_35,CARDS_36_37,CARDS_38_39,CARDS_40,CARDS_PLUS_A,CARDS_PLUS_B,CARDS_PLUS_C,CARDS_PLUS_D,CARDS_PLUS_E).map((r,i)=>({id:"c"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
+const OXS=[].concat(RAW_OX,RAW_OX2,RAW_OX3,RAW_OX4,RAW_OX5,RAW_OX6,RAW_OX7,RAW_OX8,RAW_OX9,RAW_OX10,RAW_OX11,RAW_OX12,RAW_OX13,RAW_OX14,RAW_OX15,RAW_OX16,RAW_OX17).map((r,i)=>({id:"x"+i,ch:r[0],q:r[1],ans:!!r[2],tip:r[3]||""}));
+const SEQS=[].concat(RAW_SEQ,RAW_SEQ2,RAW_SEQ3,RAW_SEQ4,RAW_SEQ5,RAW_SEQ6,RAW_SEQ7,RAW_SEQ8,RAW_SEQ9,RAW_SEQ10,RAW_SEQ11,RAW_SEQ12,RAW_SEQ13,RAW_LINE_A.map(r=>[r[0],r[1],r[2]])).map((r,i)=>({id:"s"+i,ch:r[0],title:r[1],items:r[2]}));
+const SRCS=[].concat(RAW_SRC,RAW_SRC2,RAW_SRC3,RAW_SRC4,RAW_SRC5,RAW_SRC6,RAW_SRC7,RAW_SRC8,RAW_SRC9,RAW_SRC10,RAW_SRC11,RAW_SRC12,RAW_SRC13).map((r,i)=>({id:"r"+i,ch:r[0],src:r[1],q:r[2],a:r[3],w:r[4],tip:r[5]||""}));
+const BLANKS=[].concat(RAW_BLANK,RAW_BLANK2,RAW_BLANK3,RAW_BLANK4,RAW_BLANK5,RAW_BLANK6,RAW_BLANK7,RAW_BLANK8,RAW_BLANK9,RAW_BLANK10,RAW_BLANK11,RAW_BLANK12,RAW_BLANK13,RAW_BLANK14).map((r,i)=>({id:"b"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
+const CMPS=[].concat(RAW_CMP,RAW_CMP2,RAW_CMP3,RAW_CMP4,RAW_CMP5,RAW_CMP6,RAW_CMP7,RAW_CMP8,RAW_CMP9,RAW_CMP10,RAW_CMP11,RAW_CMP12,RAW_CMP13).map((r,i)=>({ci:i,ch:r[0],title:r[1],A:r[2],B:r[3],rows:r[4]}));
 const SUBJ=[].concat(RAW_SUBJ_A,RAW_SUBJ_B,RAW_SUBJ_C,RAW_SUBJ_D,RAW_SUBJ_E,RAW_SUBJ_F,RAW_SUBJ_G,RAW_SUBJ_H,RAW_SUBJ_I).map((r,i)=>({id:"u"+i,ch:r[0],name:r[1],era:r[2],year:r[3],facts:r[4],relics:r[5]||[],hint:r[6]||""}));
 const HERI=[].concat(RAW_HERI_A,RAW_HERI_B,RAW_HERI_C,RAW_HERI_D,RAW_HERI_E,RAW_HERI_F,RAW_HERI_G,RAW_HERI_H,RAW_HERI_I,RAW_HERI_J).map((r,i)=>({id:"w"+i,ch:r[0],name:r[1],era:r[2],kind:r[3],facts:r[4]}));
 const EVT=[].concat(RAW_EVENT_A,RAW_EVENT_B,RAW_EVENT_C,RAW_EVENT_D,RAW_EVENT_E,RAW_EVENT_F,RAW_EVENT_G,RAW_EVENT_H).map((r,i)=>({id:"v"+i,ch:r[0],name:r[1],year:r[2],era:r[3]}));
