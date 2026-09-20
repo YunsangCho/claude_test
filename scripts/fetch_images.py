@@ -18,7 +18,9 @@ WIDTH = 800          # 커먼즈가 권장하는 표준 썸네일 폭.  비표�
 PAUSE = 6            # 요청 사이 대기.  공유 IP 라서 짧게 두면 바로 레이트 리밋에 걸린다
 
 # 자유 라이선스만 받는다.  여기에 걸리지 않으면 버린다.
-OK_LICENSE = ("cc0", "public domain", "pd-", "cc by", "cc-by")
+# KOGL Type 1 은 공공누리 제1유형이다.  출처만 밝히면 변형과 상업적 이용까지 된다.
+# 제2유형은 상업적 이용 금지, 제3유형은 변경 금지라서 사진을 줄여 쓰는 이 작업에는 맞지 않는다.
+OK_LICENSE = ("cc0", "public domain", "pd-", "cc by", "cc-by", "kogl type 1", "공공누리 제1유형")
 # 진품이 아닌 사진을 걸러 낸다.  히스토리 문서에 모형과 기념품이 섞인다는 경고가 있다.
 BAD_WORDS = ("replica", "réplica", "replika", "model of", "miniature", "lego",
              "stamp", "postage", "banknote of", "souvenir", "toy", "cosplay",
