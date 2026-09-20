@@ -1,10 +1,13 @@
 data/structured/figures.js
 data/structured/heritage-ch01-09.js
 data/structured/heritage-ch10-15.js
+data/structured/heritage-ch16-21.js
 data/structured/events-ch01-09.js
 data/structured/events-ch10-15.js
+data/structured/events-ch16-21.js
 data/structured/subjects-ch01-09.js
 data/structured/subjects-ch10-15.js
+data/structured/subjects-ch16-21.js
 data/cards/cards-ch01-03.js
 data/cards/cards-ch04-05.js
 data/cards/cards-ch06-07.js
