@@ -53,6 +53,10 @@ data/questions/questions-ch22-25.js
 data/questions/questions-ch26-29.js
 data/questions/questions-ch30-33.js
 data/questions/questions-ch34-37.js
+data/questions/questions-plus-ox1.js
+data/questions/questions-plus-ox2.js
+data/questions/questions-plus-ox3.js
+data/questions/questions-plus-ox4.js
 data/questions/questions-plus-cmp.js
 data/questions/questions-plus-src.js
 src/app.js

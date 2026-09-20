@@ -22,7 +22,7 @@ const ERAS=[
  {name:"현대",sub:"38~40강",ch:[38,39,40]}];
 
 const CARDS=[].concat(CARDS_01_03,CARDS_04_05,CARDS_06_07,CARDS_08_09,CARDS_10_11,CARDS_12_13,CARDS_14_15,CARDS_16_17,CARDS_18_19,CARDS_20_21,CARDS_22_23,CARDS_24_25,CARDS_26_27,CARDS_28_29,CARDS_30_31,CARDS_32_33,CARDS_34_35,CARDS_36_37,CARDS_38_39,CARDS_40).map((r,i)=>({id:"c"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
-const OXS=[].concat(RAW_OX,RAW_OX2,RAW_OX3,RAW_OX4,RAW_OX5,RAW_OX6,RAW_OX7,RAW_OX8,RAW_OX9,RAW_OX10,RAW_OX11,RAW_OX12).map((r,i)=>({id:"x"+i,ch:r[0],q:r[1],ans:!!r[2],tip:r[3]||""}));
+const OXS=[].concat(RAW_OX,RAW_OX2,RAW_OX3,RAW_OX4,RAW_OX5,RAW_OX6,RAW_OX7,RAW_OX8,RAW_OX9,RAW_OX10,RAW_OX11,RAW_OX12,RAW_OX13,RAW_OX14,RAW_OX15,RAW_OX16).map((r,i)=>({id:"x"+i,ch:r[0],q:r[1],ans:!!r[2],tip:r[3]||""}));
 const SEQS=[].concat(RAW_SEQ,RAW_SEQ2,RAW_SEQ3,RAW_SEQ4,RAW_SEQ5,RAW_SEQ6,RAW_SEQ7,RAW_SEQ8,RAW_SEQ9,RAW_SEQ10,RAW_SEQ11,RAW_LINE_A.map(r=>[r[0],r[1],r[2]])).map((r,i)=>({id:"s"+i,ch:r[0],title:r[1],items:r[2]}));
 const SRCS=[].concat(RAW_SRC,RAW_SRC2,RAW_SRC3,RAW_SRC4,RAW_SRC5,RAW_SRC6,RAW_SRC7,RAW_SRC8,RAW_SRC9,RAW_SRC10,RAW_SRC11,RAW_SRC12).map((r,i)=>({id:"r"+i,ch:r[0],src:r[1],q:r[2],a:r[3],w:r[4],tip:r[5]||""}));
 const BLANKS=[].concat(RAW_BLANK,RAW_BLANK2,RAW_BLANK3,RAW_BLANK4,RAW_BLANK5,RAW_BLANK6,RAW_BLANK7,RAW_BLANK8,RAW_BLANK9,RAW_BLANK10,RAW_BLANK11).map((r,i)=>({id:"b"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
