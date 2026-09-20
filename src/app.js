@@ -27,9 +27,9 @@ const SEQS=[].concat(RAW_SEQ,RAW_SEQ2,RAW_SEQ3,RAW_SEQ4,RAW_SEQ5,RAW_SEQ6,RAW_SE
 const SRCS=[].concat(RAW_SRC,RAW_SRC2,RAW_SRC3,RAW_SRC4,RAW_SRC5,RAW_SRC6,RAW_SRC7,RAW_SRC8,RAW_SRC9,RAW_SRC10,RAW_SRC11,RAW_SRC12).map((r,i)=>({id:"r"+i,ch:r[0],src:r[1],q:r[2],a:r[3],w:r[4],tip:r[5]||""}));
 const BLANKS=[].concat(RAW_BLANK,RAW_BLANK2,RAW_BLANK3,RAW_BLANK4,RAW_BLANK5,RAW_BLANK6,RAW_BLANK7,RAW_BLANK8,RAW_BLANK9,RAW_BLANK10,RAW_BLANK11,RAW_BLANK12,RAW_BLANK13).map((r,i)=>({id:"b"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
 const CMPS=[].concat(RAW_CMP,RAW_CMP2,RAW_CMP3,RAW_CMP4,RAW_CMP5,RAW_CMP6,RAW_CMP7,RAW_CMP8,RAW_CMP9,RAW_CMP10,RAW_CMP11,RAW_CMP12).map((r,i)=>({ci:i,ch:r[0],title:r[1],A:r[2],B:r[3],rows:r[4]}));
-const SUBJ=[].concat(RAW_SUBJ_A,RAW_SUBJ_B,RAW_SUBJ_C,RAW_SUBJ_D,RAW_SUBJ_E,RAW_SUBJ_F,RAW_SUBJ_G).map((r,i)=>({id:"u"+i,ch:r[0],name:r[1],era:r[2],year:r[3],facts:r[4],relics:r[5]||[],hint:r[6]||""}));
+const SUBJ=[].concat(RAW_SUBJ_A,RAW_SUBJ_B,RAW_SUBJ_C,RAW_SUBJ_D,RAW_SUBJ_E,RAW_SUBJ_F,RAW_SUBJ_G,RAW_SUBJ_H).map((r,i)=>({id:"u"+i,ch:r[0],name:r[1],era:r[2],year:r[3],facts:r[4],relics:r[5]||[],hint:r[6]||""}));
 const HERI=[].concat(RAW_HERI_A,RAW_HERI_B,RAW_HERI_C,RAW_HERI_D,RAW_HERI_E,RAW_HERI_F,RAW_HERI_G).map((r,i)=>({id:"w"+i,ch:r[0],name:r[1],era:r[2],kind:r[3],facts:r[4]}));
-const EVT=[].concat(RAW_EVENT_A,RAW_EVENT_B,RAW_EVENT_C,RAW_EVENT_D,RAW_EVENT_E,RAW_EVENT_F,RAW_EVENT_G).map((r,i)=>({id:"v"+i,ch:r[0],name:r[1],year:r[2],era:r[3]}));
+const EVT=[].concat(RAW_EVENT_A,RAW_EVENT_B,RAW_EVENT_C,RAW_EVENT_D,RAW_EVENT_E,RAW_EVENT_F,RAW_EVENT_G,RAW_EVENT_H).map((r,i)=>({id:"v"+i,ch:r[0],name:r[1],year:r[2],era:r[3]}));
 SUBJ.forEach(x=>x.cat="s");HERI.forEach(x=>x.cat="h");
 const IMGS=[].concat(RAW_IMG).map((r,i)=>({id:"g"+i,ch:r[0],name:r[1],group:r[2],ask:r[3],svg:r[4],tip:r[5]||""}));
 /* 사진.  photos.js 가 빌드에 들어갔을 때만 채워진다.

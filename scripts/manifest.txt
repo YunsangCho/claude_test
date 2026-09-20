@@ -14,6 +14,7 @@ data/structured/events-ch22-27.js
 data/structured/events-ch28-33.js
 data/structured/events-ch34-37.js
 data/structured/events-ch38-40.js
+data/structured/events-plus.js
 data/structured/subjects-ch01-09.js
 data/structured/subjects-ch10-15.js
 data/structured/subjects-ch16-21.js
@@ -21,6 +22,7 @@ data/structured/subjects-ch22-27.js
 data/structured/subjects-ch28-33.js
 data/structured/subjects-ch34-37.js
 data/structured/subjects-ch38-40.js
+data/structured/subjects-plus.js
 data/cards/cards-ch01-03.js
 data/cards/cards-ch04-05.js
 data/cards/cards-ch06-07.js
