@@ -1,0 +1,35 @@
+name: build
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # CLAUDE.md 의 명령 두 개를 그대로 돌린다.  check 가 실패하면 여기서 멈춘다.
+      - name: build
+        run: python scripts/build.py
+
+      - name: check
+        run: node scripts/check.mjs
+
+      - name: 결과물 보관
+        uses: actions/upload-artifact@v4
+        with:
+          name: korean-history-cards
+          path: dist/한국사-카드덱.html
+          if-no-files-found: error
