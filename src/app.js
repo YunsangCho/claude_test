@@ -32,10 +32,24 @@ const HERI=[].concat(RAW_HERI_A,RAW_HERI_B,RAW_HERI_C,RAW_HERI_D,RAW_HERI_E,RAW_
 const EVT=[].concat(RAW_EVENT_A,RAW_EVENT_B,RAW_EVENT_C,RAW_EVENT_D,RAW_EVENT_E,RAW_EVENT_F,RAW_EVENT_G).map((r,i)=>({id:"v"+i,ch:r[0],name:r[1],year:r[2],era:r[3]}));
 SUBJ.forEach(x=>x.cat="s");HERI.forEach(x=>x.cat="h");
 const IMGS=[].concat(RAW_IMG).map((r,i)=>({id:"g"+i,ch:r[0],name:r[1],group:r[2],ask:r[3],svg:r[4],tip:r[5]||""}));
+/* 사진.  photos.js 가 빌드에 들어갔을 때만 채워진다.
+   앱을 공개 배포하므로 CC BY 계열은 저작자와 라이선스를 그림 아래에 함께 보여 준다. */
+const _e0=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const PHOTOS=(typeof RAW_PHOTO==="undefined"?[]:RAW_PHOTO).map((r,i)=>({
+  id:"p"+i,ch:r[0],name:r[1],group:r[2],ask:r[3],
+  svg:`<img class="photo" src="${r[4]}" alt="${_e0(r[1])}" loading="lazy"><span class="credit">${_e0(r[5])}</span>`,
+  tip:"출처 "+r[5],credit:r[5],link:r[6]||r[1],photo:1}));
+/* 도식과 사진이 모두 있으면 사진을 쓴다. */
+PHOTOS.forEach(p=>{const i=IMGS.findIndex(v=>v.name===p.name);if(i>=0)IMGS.splice(i,1);});
+IMGS.push.apply(IMGS,PHOTOS);
 const FACTOBJ=SUBJ.concat(HERI);
 const FIGMAP={"장군총":"돌무지무덤","석촌동 고분군":"돌무지무덤","무용총":"굴식 돌방무덤","강서대묘":"굴식 돌방무덤",
  "정혜공주 묘":"굴식 돌방무덤","천마총":"돌무지덧널무덤","무령왕릉":"벽돌무덤","정효공주 묘":"벽돌무덤"};
-FACTOBJ.forEach(x=>{const im=IMGS.find(v=>v.name===x.name)||IMGS.find(v=>v.name===FIGMAP[x.name]);if(im)x.svg=im.svg;});
+/* 주체와 문화유산에 그림을 붙인다.  images.csv 의 match 로 이어진 사진이 가장 우선이다. */
+FACTOBJ.forEach(x=>{
+  const im=PHOTOS.find(v=>v.link===x.name)||IMGS.find(v=>v.name===x.name)||IMGS.find(v=>v.name===FIGMAP[x.name]);
+  if(im)x.svg=im.svg;
+});
 const CMPQ=[];
 CMPS.forEach(t=>t.rows.forEach((row,ri)=>{
   [1,2].forEach(side=>CMPQ.push({id:`m${t.ci}_${ri}_${side}`,ch:t.ch,tbl:t,key:row[0],

@@ -1,3 +1,4 @@
+data/structured/photos.js
 data/structured/figures.js
 data/structured/heritage-ch01-09.js
 data/structured/heritage-ch10-15.js
