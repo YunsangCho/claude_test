@@ -1,0 +1,5 @@
+dist/
+images/raw/
+images/dist/
+docs/missing.txt
+__pycache__/
