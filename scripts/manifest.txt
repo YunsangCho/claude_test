@@ -1,5 +1,6 @@
 data/structured/photos.js
 data/structured/figures.js
+data/structured/figures-plus.js
 data/structured/heritage-ch01-09.js
 data/structured/heritage-ch10-15.js
 data/structured/heritage-ch16-21.js
@@ -10,6 +11,7 @@ data/structured/heritage-ch38-40.js
 data/structured/heritage-plus-a.js
 data/structured/heritage-plus-b.js
 data/structured/heritage-plus-c.js
+data/structured/heritage-plus-e.js
 data/structured/events-ch01-09.js
 data/structured/events-ch10-15.js
 data/structured/events-ch16-21.js
@@ -18,6 +20,7 @@ data/structured/events-ch28-33.js
 data/structured/events-ch34-37.js
 data/structured/events-ch38-40.js
 data/structured/events-plus.js
+data/structured/events-plus2.js
 data/structured/subjects-ch01-09.js
 data/structured/subjects-ch10-15.js
 data/structured/subjects-ch16-21.js
@@ -27,6 +30,9 @@ data/structured/subjects-ch34-37.js
 data/structured/subjects-ch38-40.js
 data/structured/subjects-plus.js
 data/structured/subjects-plus2.js
+data/structured/subjects-plus3a.js
+data/structured/subjects-plus3b.js
+data/structured/subjects-plus3c.js
 data/cards/cards-ch01-03.js
 data/cards/cards-ch04-05.js
 data/cards/cards-ch06-07.js
