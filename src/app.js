@@ -27,9 +27,9 @@ const SEQS=[].concat(RAW_SEQ,RAW_SEQ2,RAW_SEQ3,RAW_SEQ4,RAW_SEQ5,RAW_SEQ6,RAW_SE
 const SRCS=[].concat(RAW_SRC,RAW_SRC2,RAW_SRC3,RAW_SRC4,RAW_SRC5,RAW_SRC6,RAW_SRC7,RAW_SRC8,RAW_SRC9,RAW_SRC10,RAW_SRC11).map((r,i)=>({id:"r"+i,ch:r[0],src:r[1],q:r[2],a:r[3],w:r[4],tip:r[5]||""}));
 const BLANKS=[].concat(RAW_BLANK,RAW_BLANK2,RAW_BLANK3,RAW_BLANK4,RAW_BLANK5,RAW_BLANK6,RAW_BLANK7,RAW_BLANK8,RAW_BLANK9,RAW_BLANK10,RAW_BLANK11).map((r,i)=>({id:"b"+i,ch:r[0],q:r[1],a:r[2],tip:r[3]||""}));
 const CMPS=[].concat(RAW_CMP,RAW_CMP2,RAW_CMP3,RAW_CMP4,RAW_CMP5,RAW_CMP6,RAW_CMP7,RAW_CMP8,RAW_CMP9,RAW_CMP10,RAW_CMP11).map((r,i)=>({ci:i,ch:r[0],title:r[1],A:r[2],B:r[3],rows:r[4]}));
-const SUBJ=[].concat(RAW_SUBJ_A).map((r,i)=>({id:"u"+i,ch:r[0],name:r[1],era:r[2],year:r[3],facts:r[4],relics:r[5]||[],hint:r[6]||""}));
-const HERI=[].concat(RAW_HERI_A).map((r,i)=>({id:"w"+i,ch:r[0],name:r[1],era:r[2],kind:r[3],facts:r[4]}));
-const EVT=[].concat(RAW_EVENT_A).map((r,i)=>({id:"v"+i,ch:r[0],name:r[1],year:r[2],era:r[3]}));
+const SUBJ=[].concat(RAW_SUBJ_A,RAW_SUBJ_B).map((r,i)=>({id:"u"+i,ch:r[0],name:r[1],era:r[2],year:r[3],facts:r[4],relics:r[5]||[],hint:r[6]||""}));
+const HERI=[].concat(RAW_HERI_A,RAW_HERI_B).map((r,i)=>({id:"w"+i,ch:r[0],name:r[1],era:r[2],kind:r[3],facts:r[4]}));
+const EVT=[].concat(RAW_EVENT_A,RAW_EVENT_B).map((r,i)=>({id:"v"+i,ch:r[0],name:r[1],year:r[2],era:r[3]}));
 SUBJ.forEach(x=>x.cat="s");HERI.forEach(x=>x.cat="h");
 const IMGS=[].concat(RAW_IMG).map((r,i)=>({id:"g"+i,ch:r[0],name:r[1],group:r[2],ask:r[3],svg:r[4],tip:r[5]||""}));
 const FACTOBJ=SUBJ.concat(HERI);
@@ -437,7 +437,10 @@ function foreignFact(x,n){
   }
   return out;
 }
-function subjLabel(x){return ["선사","초기 국가","고대 제도"].indexOf(x.era)>=0||x.kind?"무엇":"인물";}
+const NOTPERSON=["선사","초기 국가","고대 제도",
+ "고려 정치 기구","무신 정권 기구","고려 정치 세력","고려 외교","고려 경제","고려 사회",
+ "고려 교육 기관","고려 불교 종파","고려 과학 기술"];
+function subjAsk(x){return NOTPERSON.indexOf(x.era)>=0||x.kind?"이것은 무엇일까요?":"이 인물은 누구일까요?";}
 function fig(x,sm){return x&&x.svg?`<div class="figbox${sm?" sm":""}">${x.svg}</div>`:"";}
 function drawPic(v){
   const isMap=g=>g.indexOf("지도")>=0;
@@ -503,7 +506,7 @@ function drawWhois(x){
   const opts=shuffle([x.name].concat(shuffle(pool).slice(0,3).map(y=>y.name)));
   const paint=()=>{
     $("#stage").innerHTML=`<div class="card">${tagline(x.ch)}
-      <p class="q sm">이 ${subjLabel(x)}은 무엇일까요?<span class="qsub">힌트를 보고 답을 고르세요</span></p>
+      <p class="q sm">${subjAsk(x)}<span class="qsub">힌트를 보고 답을 고르세요</span></p>
       <div class="hintlist">${hints.slice(0,shown).map((h,i)=>`<div class="hintitem"><i>힌트 ${i+1}</i>${esc(h)}</div>`).join("")}</div></div>
       <div class="opts" id="opts">${opts.map((o,i)=>`<button class="opt" data-o="${i}"><span class="mk">${MARKS[i]}</span><span>${esc(o)}</span></button>`).join("")}</div><div id="vd"></div>`;
     $("#opts").querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(+b.dataset.o));
