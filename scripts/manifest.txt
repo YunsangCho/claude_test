@@ -26,6 +26,7 @@ data/structured/subjects-ch28-33.js
 data/structured/subjects-ch34-37.js
 data/structured/subjects-ch38-40.js
 data/structured/subjects-plus.js
+data/structured/subjects-plus2.js
 data/cards/cards-ch01-03.js
 data/cards/cards-ch04-05.js
 data/cards/cards-ch06-07.js
