@@ -7,6 +7,9 @@ data/structured/heritage-ch22-27.js
 data/structured/heritage-ch28-33.js
 data/structured/heritage-ch34-37.js
 data/structured/heritage-ch38-40.js
+data/structured/heritage-plus-a.js
+data/structured/heritage-plus-b.js
+data/structured/heritage-plus-c.js
 data/structured/events-ch01-09.js
 data/structured/events-ch10-15.js
 data/structured/events-ch16-21.js
@@ -43,6 +46,10 @@ data/cards/cards-ch34-35.js
 data/cards/cards-ch36-37.js
 data/cards/cards-ch38-39.js
 data/cards/cards-ch40.js
+data/cards/cards-plus-a.js
+data/cards/cards-plus-b.js
+data/cards/cards-plus-c.js
+data/cards/cards-plus-d.js
 data/questions/questions-legacy-a.js
 data/questions/questions-legacy-b.js
 data/questions/questions-legacy-c.js
